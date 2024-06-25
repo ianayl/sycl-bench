@@ -1,3 +1,9 @@
+> [!IMPORTANT]  
+> ### What is the point of this?
+> This is a modification of [sycl-bench](https://github.com/unisa-hpc/sycl-bench/tree/master) meant as a temporary hotfix used in a proof-of-concept github workflow benchmarking the performance of changes made to [intel/llvm](https://github.com/intel/llvm).
+>
+> As documented in https://github.com/intel/llvm/issues/14288 and https://github.com/intel/llvm/issues/14276, there are currently issues with `LoopVectorizePass` and `-march=native`:  [sycl-bench](https://github.com/unisa-hpc/sycl-bench/tree/master) currently uses `-O3` and `-O2` (which both invokes `LoopVectorizePass`) along with `-march=native`, and thus this exists as a temporary fix to be used in proof-of-concept versions of the benchmark github workflow, without the `-march=native`.
+
 # SYCL-Bench
 SYCL Benchmark Suite, work in progress
 
